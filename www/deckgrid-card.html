@@ -1,0 +1,13 @@
+<div class="a-card">
+    <bold>{{card.title}}</bold>
+    <div ng-repeat="webcam in card.urls track by $index">
+    	<img nf-if="webcam.type == 'image'" src="" data-ng-src="webcam.url">
+    	<ng-youtube-embed nf-if="webcam.youtube == true"
+		    video="webcam.url" 
+		    autoplay="true"
+		    color="white"
+		    disablekb="true"
+		    end="20">
+		</ng-youtube-embed>
+    </div>
+</div>
